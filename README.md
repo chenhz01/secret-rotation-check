@@ -4,6 +4,8 @@ A hash-chained rotation ledger plus checker for shared secrets: append `create`/
 
 *Confidence: High (≥80%) that overdue detection with named ownership closes the most common rotation gap; the tamper-evidence level here is basic integrity, not cryptographic attestation.*
 
+<p align="center"><img src="docs/demo.gif" alt="demo" width="720"></p>
+
 ## Problem
 
 Secret rotation fails in boring ways: nobody remembers *when* a key was last rotated, the "owner" left the company, and after an incident nobody can prove the ledger wasn't edited retroactively. Password managers track expiry dates in a UI, but there is no machine-checkable, append-only record that answers three questions — how old is each secret, who owns it, and is the history intact. CI needs those answers as an exit code, not a screenshot.
